@@ -13,12 +13,7 @@
         Создавай красивые сайты и востребованные интерфейсы. Начни путь в мир
         высокооплачиваемых профессий!
       </p>
-      <button
-        class="cta-btn"
-        onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})"
-      >
-        Записаться
-      </button>
+      <button class="cta-btn" onclick="scrollToForm()">Записаться</button>
     </header>
     <main>
       <section>
@@ -106,7 +101,7 @@
           Заполни форму — и получи бесплатную консультацию по старту во
           фронтенде 👇
         </p>
-        <form class="enroll-form" onsubmit="return enrollSubmit(event)">
+        <form class="enroll-form" onsubmit="enrollSubmit(event)">
           <input type="text" name="name" placeholder="Ваше имя" required />
           <input type="email" name="email" placeholder="Ваш e-mail" required />
           <button type="submit">Записаться</button>
@@ -117,13 +112,6 @@
       </section>
     </main>
     <footer>&copy; 2025 Фронтенд Направление. Все права защищены.</footer>
-    <script>
-      function enrollSubmit(event) {
-        event.preventDefault();
-        document.querySelector(".enroll-form").style.display = "none";
-        document.getElementById("successMsg").style.display = "block";
-        return false;
-      }
-    </script>
+    <script src="script.js" />
   </body>
 </html>
